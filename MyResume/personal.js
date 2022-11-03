@@ -8,5 +8,7 @@ $(document).ready(function(){
 	 	 
 	 var  ageDate = new Date(difference); 
 	 var calculatedAge=   Math.abs(ageDate.getUTCFullYear() - 1970);
-   document.getElementsByClassName("age")[0].innerHTML = calculatedAge;
+	for(let index = 0; index < document.getElementsByClassName("age").length; index++) {
+		document.getElementsByClassName("age")[index].innerHTML = calculatedAge;
+	}
 });
