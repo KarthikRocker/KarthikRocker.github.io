@@ -557,7 +557,7 @@
                 <li><i class="fa-solid fa-location-dot"></i> Coimbatore, Tamil Nadu</li>
                 <li><i class="fa-solid fa-envelope"></i> <a href="mailto:karthitech.mca@hotmail.com">karthitech.mca@hotmail.com</a></li>
                 <li><i class="fa-solid fa-phone"></i> +91 99942 98575</li>
-                <li><i class="fa-solid fa-briefcase"></i> 12+ Years Experience</li>
+                <li><i class="fa-solid fa-briefcase"></i> <span id="yearsExperience">12+</span> Years Experience</li>
             </ul>
         </div>
 
@@ -582,7 +582,7 @@
             <span class="hero-badge"><i class="fa-solid fa-bolt"></i> High-Velocity Engineering</span>
             <h2>Designing scalable distributed solutions across the <span>.NET & Azure Ecosystem</span></h2>
             <p>
-                Results-driven Lead Software Engineer with over 11 years of hands-on experience designing, architecting, and delivering production-ready corporate architectures. Expert in Microservices, Domain-Driven Design (DDD), and Event-Driven environments. Dedicated to setting top-tier development standards and exploring advanced AI-assisted workflows.
+                Results-driven Lead Software Engineer with over 11 years of hands-on experience designing, architecting, and delivering production-ready corporate architectures. Expert in Microservice[...]
             </p>
             <div class="hero-cta-group">
                 <a href="mailto:karthitech.mca@hotmail.com" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Get In Touch</a>
@@ -657,7 +657,7 @@
                     </div>
                     <div class="timeline-body">
                         <ul>
-                            <li>Build and maintain production-grade automotive software (PPG Optima) using Angular 20 and .NET Core, optimizing paint shop workflows via real-time data ingestion.</li>
+                            <li>Build and maintain production-grade automotive software (PPG Optima) using Angular 20 and .NET Core, optimizing paint shop workflows via real-time data ingestion.<[...]
                             <li>Drive codebase unification strategies—merging two distinct massive legacy software platforms into a high-performance application footprint.</li>
                             <li>Leverage GitHub Copilot Agent Mode aggressively to boost high-velocity engineering metrics and overall clean code output.</li>
                             <li>Actively lead across cross-functional distributed agile scrums maintaining deep client alignment.</li>
@@ -694,7 +694,7 @@
                     </div>
                     <div class="timeline-body">
                         <ul>
-                            <li>Headed complex module deliveries for Pearson SchoolNet—an expansive K–12 educational evaluation framework built with MVC, Angular, and high-performance SQL.</li>
+                            <li>Headed complex module deliveries for Pearson SchoolNet—an expansive K–12 educational evaluation framework built with MVC, Angular, and high-performance SQL.</l[...]
                             <li>Handled system footprint impact analyses, comprehensive unit-level component design maps, and cross-team test coordination layouts.</li>
                             <li>Successfully deployed Klick Book (Milano SaaS, Canada) using full Domain-Driven Design patterns mapping critical POS, booking, and CRM system integrations.</li>
                         </ul>
@@ -727,7 +727,8 @@
                     <div class="project-top">
                         <h3>KPMG – Evolute</h3>
                         <span class="client-meta">Client: Financial / Corporate Compliance</span>
-                        <p class="project-desc">Highly resilient enterprise scale KYC onboarding portal managing digital entity registrations, directorship modifications, and cross-border M&As.</p>
+                        <p class="project-desc">Highly resilient enterprise scale KYC onboarding portal managing digital entity registrations, directorship modifications, and cross-border M&As.<[...]
+                        </p>
                     </div>
                     <div class="project-tech">
                         <span class="tech-pill">.NET 8</span>
@@ -754,7 +755,8 @@
                     <div class="project-top">
                         <h3>Marina Bay Sands Integration</h3>
                         <span class="client-meta">Client: Hospitality & Enterprise Operations</span>
-                        <p class="project-desc">A bulletproof Azure APIM abstraction mesh managing cryptographic JWT security handshakes, high-velocity validation processing, and core API rules.</p>
+                        <p class="project-desc">A bulletproof Azure APIM abstraction mesh managing cryptographic JWT security handshakes, high-velocity validation processing, and core API rules.<[...]
+                        </p>
                     </div>
                     <div class="project-tech">
                         <span class="tech-pill">Azure APIM</span>
@@ -801,6 +803,27 @@
     </main>
 
     <script>
+        // Calculate years of experience dynamically
+        function calculateYearsOfExperience() {
+            const startDate = new Date(2014, 5, 14); // June 14, 2014 (month is 0-indexed)
+            const currentDate = new Date();
+            
+            let yearsOfExperience = currentDate.getFullYear() - startDate.getFullYear();
+            const monthDifference = currentDate.getMonth() - startDate.getMonth();
+            
+            // If the current month/day hasn't reached the anniversary yet, subtract 1
+            if (monthDifference < 0 || (monthDifference === 0 && currentDate.getDate() < startDate.getDate())) {
+                yearsOfExperience--;
+            }
+            
+            // Update the years experience element
+            document.getElementById('yearsExperience').textContent = yearsOfExperience + '+';
+        }
+
+        // Call the function when the page loads
+        document.addEventListener('DOMContentLoaded', calculateYearsOfExperience);
+
+        // Navigation scroll tracking
         const sections = document.querySelectorAll("section");
         const navLi = document.querySelectorAll("nav ul.nav-links li a");
 
