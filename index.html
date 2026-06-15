@@ -1,1574 +1,826 @@
-﻿<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js" lang="en"><!--<![endif]--><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta charset="utf-8">
-    
-    <!-- Site Title -->
-    <title>Karthikeyan Govindarajan</title>
-    
-    <meta name="description" content="Karthikeyan's Resume">
-    <meta name="keywords" content="hollykarthi, resume">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karthikeyan Govindarajan | Lead Software Engineer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="family">
 
-    <!-- Google Font -->
-    <link href="MyResume/css_002.css" rel="stylesheet" type="text/css">
-    <link href="MyResume/css.css" rel="stylesheet" type="text/css">
-    
-    <!-- Bootstrap Core CSS -->
-    <link href="MyResume/bootstrap.css" rel="stylesheet" type="text/css">
-    
-    <!-- Font icons CSS -->
-    <link href="MyResume/style.css" rel="stylesheet" type="text/css">
-    <link href="MyResume/font-awesome.css" rel="stylesheet" type="text/css">
-    
-    <!-- Plugins CSS -->
-    <link href="MyResume/jpreloader.css" rel="stylesheet" type="text/css">
-    <link href="MyResume/animate.css" rel="stylesheet" type="text/css">
-    <link href="MyResume/magnific-popup.css" rel="stylesheet" type="text/css">
-    <link href="MyResume/flexslider.css" rel="stylesheet" type="text/css">
-    <link href="MyResume/morphext.css" rel="stylesheet" type="text/css">
-    
-    <!-- Main CSS -->
-    <link href="MyResume/berg.css" rel="stylesheet" type="text/css">
-    
-    <!-- Color CSS -->
-    <!--<link href="assets/css/colors/green.css" rel="stylesheet" type="text/css">-->
-    
-    <link href="MyResume/switch-style.css" rel="stylesheet" type="text/css">
-    
-    <!-- Modernizr JS for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 8]>
-    <script src="assets/plugins/modernizr.min.js"></script>
-    <![endif]-->
-<link href="MyResume/light.css" type="text/css" rel="stylesheet"></head>
+    <style>
+        :root {
+            --bg-dark: #0d1117;
+            --bg-card: rgba(22, 27, 34, 0.7);
+            --border-color: rgba(48, 54, 61, 0.8);
+            --text-main: #c9d1d9;
+            --text-bright: #f0f6fc;
+            --text-muted: #8b949e;
+            --accent-primary: #58a6ff;
+            --accent-green: #3fb950;
+            --accent-purple: #bc8cff;
+            --font-sans: 'Plus Jakarta Sans', sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+            --sidebar-width: 320px;
+        }
 
-<!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
-<body style="display: block;" id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" data-offset="66">
-    <!--[if lt IE 10]>
-        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-         
-    <!-- HERO START -->
-    <header id="home" class="hero">
-        <div class="pattern-overlay"></div>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: var(--font-sans);
+            display: flex;
+            min-height: 100vh;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(88, 166, 255, 0.05) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(188, 140, 255, 0.05) 0%, transparent 40%);
+        }
+
+        /* --- SIDEBAR PROFILE CARD --- */
+        aside {
+            width: var(--sidebar-width);
+            background: var(--bg-card);
+            backdrop-filter: blur(12px);
+            border-right: 1px solid var(--border-color);
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            padding: 2.5rem 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            z-index: 100;
+        }
+
+        .profile-info img {
+            width: 100px;
+            height: 100px;
+            border-radius: 24px;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-purple));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 8px 24px rgba(88, 166, 255, 0.2);
+        }
+
+        .profile-info h1 {
+            font-size: 1.5rem;
+            color: var(--text-bright);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 0.5rem;
+        }
+
+        .profile-info .title {
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            color: var(--accent-primary);
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .contact-list {
+            list-style: none;
+            font-size: 0.85rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-list li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .contact-list li i {
+            color: var(--accent-primary);
+            width: 16px;
+        }
+
+        .contact-list a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .contact-list a:hover {
+            color: var(--text-bright);
+        }
+
+        /* Nav Menu inside Sidebar */
+        nav {
+            margin-top: 1rem;
+            flex-grow: 1;
+        }
+
+        .nav-links {
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-bottom: 0.5rem;
+        }
+
+        .nav-links a {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 0.75rem 1rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border-radius: 8px;
+            transition: all 0.2s;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--text-bright);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .nav-links a.active {
+            border-left: 3px solid var(--accent-primary);
+            padding-left: calc(1rem - 3px);
+        }
+
+        .sidebar-footer {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            font-family: var(--font-mono);
+            border-top: 1px solid var(--border-color);
+            padding-top: 1.5rem;
+        }
+
+        /* --- MAIN CONTENT AREA --- */
+        main {
+            margin-left: var(--sidebar-width);
+            flex-grow: 1;
+            padding: 3rem 4rem;
+            max-width: 1200px;
+        }
+
+        section {
+            padding-top: 2rem;
+            margin-bottom: 5rem;
+        }
+
+        .section-title {
+            font-size: 1.75rem;
+            color: var(--text-bright);
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .section-title::after {
+            content: '';
+            height: 1px;
+            flex-grow: 1;
+            background: var(--border-color);
+        }
+
+        /* --- HERO BANNER --- */
+        .hero {
+            padding-top: 4rem;
+            margin-bottom: 6rem;
+        }
+
+        .hero-badge {
+            background: rgba(88, 166, 255, 0.1);
+            color: var(--accent-primary);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-family: var(--font-mono);
+            border: 1px solid rgba(88, 166, 255, 0.2);
+            display: inline-block;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h2 {
+            font-size: 3.5rem;
+            color: var(--text-bright);
+            line-height: 1.15;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
+
+        .hero h2 span {
+            background: linear-gradient(120deg, var(--accent-primary), var(--accent-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            line-height: 1.7;
+            color: var(--text-muted);
+            max-width: 800px;
+            margin-bottom: 2rem;
+        }
+
+        .hero-cta-group {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn {
+            padding: 0.8rem 1.75rem;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background: var(--accent-primary);
+            color: #0d1117;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(88, 166, 255, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-bright);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.03);
+            border-color: var(--text-muted);
+        }
+
+        /* --- SKILLS GRID --- */
+        .skills-category {
+            margin-bottom: 2.5rem;
+        }
+
+        .skills-category h4 {
+            font-family: var(--font-mono);
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .skills-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .tag {
+            background: rgba(22, 27, 34, 0.6);
+            border: 1px solid var(--border-color);
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            color: var(--text-main);
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .tag:hover {
+            border-color: var(--accent-primary);
+            background: rgba(88, 166, 255, 0.03);
+            color: var(--text-bright);
+            transform: translateY(-1px);
+        }
+
+        .tag i {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        /* --- EXPERIENCES TIMELINE --- */
+        .timeline {
+            position: relative;
+            border-left: 2px solid var(--border-color);
+            padding-left: 2.5rem;
+            margin-left: 0.5rem;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3.5rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--bg-dark);
+            border: 2px solid var(--accent-primary);
+            position: absolute;
+            left: calc(-2.5rem - 7px);
+            top: 6px;
+            transition: all 0.3s;
+        }
+
+        .timeline-item:hover::before {
+            background: var(--accent-primary);
+            box-shadow: 0 0 0 4px rgba(88, 166, 255, 0.2);
+        }
+
+        .timeline-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .role h3 {
+            font-size: 1.25rem;
+            color: var(--text-bright);
+            font-weight: 600;
+        }
+
+        .company {
+            font-size: 1rem;
+            color: var(--accent-primary);
+            font-weight: 500;
+            margin-top: 0.2rem;
+        }
+
+        .duration {
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            background: rgba(48, 54, 61, 0.4);
+            padding: 4px 10px;
+            border-radius: 6px;
+            color: var(--text-muted);
+            border: 1px solid var(--border-color);
+        }
+
+        .timeline-body ul {
+            list-style: none;
+        }
+
+        .timeline-body li {
+            position: relative;
+            padding-left: 1.25rem;
+            margin-bottom: 0.6rem;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        .timeline-body li::before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: var(--accent-primary);
+        }
+
+        /* --- PROJECTS GRID --- */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .project-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.75rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.2s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(88, 166, 255, 0.4);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+        }
+
+        .project-top h3 {
+            font-size: 1.15rem;
+            color: var(--text-bright);
+            margin-bottom: 0.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .project-card .client-meta {
+            font-size: 0.8rem;
+            font-family: var(--font-mono);
+            color: var(--accent-purple);
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .project-desc {
+            font-size: 0.9rem;
+            line-height: 1.5;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+        }
+
+        .tech-pill {
+            background: rgba(255, 255, 255, 0.04);
+            color: var(--text-main);
+            padding: 3px 8px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+        }
+
+        /* --- EDUCATION & CERTIFICATIONS --- */
+        .edu-cert-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .edu-card {
+            border-left: 2px solid var(--accent-purple);
+            padding-left: 1.25rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .edu-card h4 {
+            color: var(--text-bright);
+            font-size: 1.05rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .edu-card p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 0.25rem;
+        }
+
+        .edu-meta {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--accent-primary);
+        }
+
+        .cert-list {
+            list-style: none;
+        }
+
+        .cert-list li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 0.95rem;
+        }
+
+        .cert-list li i {
+            color: var(--accent-green);
+        }
+
+        /* --- MOBILE LAYOUT RESPONSIVENESS --- */
+        @media (max-width: 992px) {
+            body {
+                flex-direction: column;
+            }
+            aside {
+                position: relative;
+                width: 100%;
+                border-right: none;
+                border-bottom: 1px solid var(--border-color);
+                padding: 2rem;
+            }
+            nav {
+                display: none; /* Hide nav links on mobile for simplicity */
+            }
+            main {
+                margin-left: 0;
+                padding: 2rem;
+            }
+            .hero h2 {
+                font-size: 2.5rem;
+            }
+            .edu-cert-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <aside>
+        <div class="profile-info">
+            <div class="avatar-placeholder">
+                <img src="https://ui-avatars.com/api/?name=Karthikeyan+Govindarajan&background=0D1117&color=58a6ff&size=100&bold=true" alt="KG">
+            </div>
+            <h1>Karthikeyan Govindarajan</h1>
+            <span class="title">Lead Software Engineer</span>
+            
+            <ul class="contact-list">
+                <li><i class="fa-solid fa-location-dot"></i> Coimbatore, Tamil Nadu</li>
+                <li><i class="fa-solid fa-envelope"></i> <a href="mailto:karthitech.mca@hotmail.com">karthitech.mca@hotmail.com</a></li>
+                <li><i class="fa-solid fa-phone"></i> +91 99942 98575</li>
+                <li><i class="fa-solid fa-briefcase"></i> 11+ Years Experience</li>
+            </ul>
+        </div>
+
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#about" class="active"><i class="fa-solid fa-user"></i> About</a></li>
+                <li><a href="#skills"><i class="fa-solid fa-code"></i> Tech Stack</a></li>
+                <li><a href="#experience"><i class="fa-solid fa-briefcase"></i> Experience</a></li>
+                <li><a href="#projects"><i class="fa-solid fa-diagram-project"></i> Projects</a></li>
+                <li><a href="#education"><i class="fa-solid fa-graduation-cap"></i> Education</a></li>
+            </ul>
+        </nav>
+
+        <div class="sidebar-footer">
+            &copy; 2026 • Built with HTML/CSS
+        </div>
+    </aside>
+
+    <main>
         
-        <div class="hero-body">
-            <div class="hero-text text-center">
-                <h1 class="small">
-                    I'm Karthikeyan Govindarjan <span class="blinker"></span>
-                </h1>
-                
-                <h1>
-                    <span class="morphext" id="js-rotating">
-                        Creative | .Net Developer
-                    </span>
-                </h1>                
-                <p><span class="age"></span> years young and tech guy.</p>
-                
-                <div class="page-scroll">
-                    <a href="#profile" class="btn btn-lg btn-custom">
-                        Know Me Better
-                    </a>
-                </div>
-                <!-- //.page-scroll -->
+        <section id="about" class="hero">
+            <span class="hero-badge"><i class="fa-solid fa-bolt"></i> High-Velocity Engineering</span>
+            <h2>Designing scalable distributed solutions across the <span>.NET & Azure Ecosystem</span></h2>
+            <p>
+                Results-driven Lead Software Engineer with over 11 years of hands-on experience designing, architecting, and delivering production-ready corporate architectures. Expert in Microservices, Domain-Driven Design (DDD), and Event-Driven environments. Dedicated to setting top-tier development standards and exploring advanced AI-assisted workflows.
+            </p>
+            <div class="hero-cta-group">
+                <a href="mailto:karthitech.mca@hotmail.com" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Get In Touch</a>
+                <a href="#projects" class="btn btn-secondary">View My Work</a>
             </div>
-            <!-- //.hero-text -->
-        </div>
-        <!-- //.hero-body -->
-    </header>
-    <!-- //HERO END -->
-    
-    
-    <!-- NAVIGATION START -->
-    <div style="height: 66px;" class="sticky-wrapper is-sticky" id="navigation-sticky-wrapper"><nav style="position: fixed; top: 0px;" id="navigation" class="navbar navbar-fixed-top center-menu" role="navigation">
-        <div class="container navbar-container">
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".berg-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                
-                <a class="navbar-brand visible-xs visible-sm" href="#page-top">Karthik</a>
-            </div>
-            <!-- //.navbar-header -->
+        </section>
+
+        <section id="skills">
+            <h2 class="section-title"><i class="fa-solid fa-code"></i> Technical Arsenal</h2>
             
-            <div style="height: 1px;" aria-expanded="false" class="navbar-collapse berg-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li class="page-scroll">
-                        <a href="#home">Home</a>
-                    </li>
-                    
-                    <li class="page-scroll">
-                        <a href="#profile">Profile</a>
-                    </li>
-                    
-                    <li class="page-scroll">
-                        <a href="#portfolio">Portfolio</a>
-                    </li>
-                    
-                    <li class="page-scroll">
-                        <a href="#services">Services</a>
-                    </li>
-                    
-                    <li class="page-scroll">
-                        <a href="#resume">Resume</a>
-                    </li>
-                    
-                    <li class="page-scroll">
-                        <a href="#references">References</a>
-                    </li>
-                    
-                    <li class="page-scroll">
-                        <a href="#skills">Skills</a>
-                    </li>
-                    
-                    <li class="page-scroll active">
-                        <a href="#contact">Contact</a>
-                    </li>
-                </ul>
+            <div class="skills-category">
+                <h4>Core Stack & Architecture</h4>
+                <div class="skills-tags">
+                    <div class="tag"><i class="fa-solid fa-circle"></i> C#</div>
+                    <div class="tag"><i class="fa-solid fa-circle"></i> .NET Core 8</div>
+                    <div class="tag"><i class="fa-solid fa-circle"></i> Microservices</div>
+                    <div class="tag"><i class="fa-solid fa-circle"></i> Domain-Driven Design (DDD)</div>
+                    <div class="tag"><i class="fa-solid fa-circle"></i> Event-Driven Architecture</div>
+                    <div class="tag"><i class="fa-solid fa-circle"></i> CQRS</div>
+                    <div class="tag"><i class="fa-solid fa-circle"></i> Modular Monolith</div>
+                    <div class="tag"><i class="fa-solid fa-circle"></i> REST API Design</div>
+                </div>
             </div>
-            <!-- //.navbar-collapse -->
-        </div>
-        <!-- //.navbar-container -->
-    </nav></div>
-    <!-- //NAVIGATION END -->
-    
-    
-    <!-- PROFILE SECTION START -->
-    <section id="profile" class="section">
-        <div class="container section-wrapper">
-            <div class="section-content">
-                <div class="row">          
-                    <div style="height: 770px;" class="col-md-7 match-height">
 
-                        <!-- PROFILE TEXT START -->
-                        <div class="profile-text padding-right-yes">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <h2 class="section-title uppercase">Hello, My Name is Karthikeyan.</h2>
-
-                                    <p>
-                                        Karthikeyan Govindarajan, <span class="age"></span> years young, born 
-and grew up in Coimbatore, Tamil Nadu, India. Highly motivated creative 
-developer with international client portfolio.
-                                    </p>
-
-                                    <span class="divider"></span>
-
-                                    <p style="opacity: 1;" class="text-grey animated bounceInUp">
-                                        I currently work at Aspire Systems Pvt Limited
-Company, where I spend most of my time crafting and working on awesome 
-projects.
-                                    </p>
-
-                                    <p style="opacity: 1;" class="text-grey animated bounceInUp">
-                                        Lorem ipsum dolor sit amet, 
-consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
- laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim 
-veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
- aliquip ex ea commodo consequat.
-                                    </p>
-                                </div>
-                                <!-- //.col-md-12 -->
-                            </div>
-                            <!-- //.row -->
-                        </div>
-                        <!-- //PROFILE TEXT END -->
-
-                        <!-- CONTACT DETAILS START -->
-                        <div class="contact-details padding-right-yes">
-                            <div class="row">
-                                <div class="col-sm-6 col-md-5">
-                                    <h4 class="uppercase">Contact Details</h4>
-
-                                    <ul class="list-unstyled text-grey">
-                                        <li>Karthikeyan Govindarajan</li>
-                                        <li>2/50, Thomas park housing unit, Race course, Coimbatore - 641018.</li>
-                                        <li>+919994298575</li>
-                                        <li>holly.karthi@gmail.com</li>
-                                        <li>www.karthirocker.github.io</li>
-                                    </ul>
-                                </div>
-                                <!-- //.col-md-5 -->
-
-                                <div class="col-sm-6 col-md-7">
-                                    <a href="#" class="btn btn-lg btn-custom">
-                                        <i class="icon-File-Download"></i> Download Resume
-                                    </a>
-                                </div>
-                                <!-- //.col-md-6 -->
-                            </div>
-                            <!-- //.row -->
-                        </div>
-                        <!-- //CONTACT DETAILS END -->
-
-                    </div>
-                    <!-- //.col-md-7 -->
-
-                    <!-- PROFILE PICTURE START -->
-                    <div style="height: 770px;" class="col-md-5 hidden-xs hidden-sm match-height pp-wrapper">
-                        <div class="profile-picture style-one">
-                            <img src="MyResume/profile01.jpg" alt="profile picture" class="img-responsive">
-                        </div>
-                    </div>
-                    <!-- //PROFILE PICTURE END -->
+            <div class="skills-category">
+                <h4>Microsoft Azure Cloud</h4>
+                <div class="skills-tags">
+                    <div class="tag"><i class="fa-cloud-bolt fa-solid"></i> APIM</div>
+                    <div class="tag"><i class="fa-cloud-bolt fa-solid"></i> Azure Functions</div>
+                    <div class="tag"><i class="fa-cloud-bolt fa-solid"></i> Durable Functions</div>
+                    <div class="tag"><i class="fa-cloud-bolt fa-solid"></i> Service Bus</div>
+                    <div class="tag"><i class="fa-cloud-bolt fa-solid"></i> CosmosDB</div>
+                    <div class="tag"><i class="fa-cloud-bolt fa-solid"></i> App Insights</div>
+                    <div class="tag"><i class="fa-cloud-bolt fa-solid"></i> Bicep (IaC)</div>
                 </div>
-                <!-- //.row -->
             </div>
-            <!-- //.section-content -->
-        </div>
-        <!-- //.container -->
-    </section>
-    <!-- //PROFILE SECTION END -->
-    
-    
-    <!-- PORTFOLIO SECTION START -->
-    <section id="portfolio" class="section">
-        <div class="container-fluid section-wrapper">
-            <div class="section-content">
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                        <h2 class="section-title uppercase">My Latest Work</h2>
 
-                        <p style="opacity: 1;" class="section-subtitle animated bounceInLeft">I'm looking to expand my portfolio while I'm on top and while I'm young.</p>
-
-                        <span class="divider center"></span>
-                    </div>
-                    <!-- //.col-md-12 -->
+            <div class="skills-category">
+                <h4>Frontend & Databases</h4>
+                <div class="skills-tags">
+                    <div class="tag"><i class="fa-brands fa-angular"></i> Angular (v15–20)</div>
+                    <div class="tag"><i class="fa-brands fa-js"></i> TypeScript</div>
+                    <div class="tag"><i class="fa-solid fa-database"></i> SQL Server</div>
+                    <div class="tag"><i class="fa-solid fa-database"></i> Entity Framework Core</div>
+                    <div class="tag"><i class="fa-solid fa-database"></i> Dapper</div>
                 </div>
-                <!-- //.row -->
-                
-                <!-- PORTFOLIO START -->
-                <div class="portfolio">
-                    <div class="row">
-                        <div class="item col-sm-6 col-md-3">
-                            <div class="project-wrapper">
-                                <div class="project-link">
-                                    <a href="http://themes.lucky-roo.com/berg/HTML_Template/assets/images/portfolio/project-image-1.jpg" class="zoom" title="Buzz Lightyear">
-                                        <i class="icon-Full-Screen"></i>
-                                    </a>
-
-                                    <a href="http://themes.lucky-roo.com/berg/HTML_Template/single-portfolio-1.html" class="external-link" target="_blank">
-                                        <i class="icon-Link"></i>
-                                    </a>
-                                </div>
-                                <!-- //.project-link -->
-
-                                <div class="project-title">
-                                    <h4>Buzz Lightyear</h4>
-                                </div>
-                                <!-- //.project-title -->
-
-                                <img src="MyResume/project-image-1.jpg" alt="" class="img-responsive">
-                            </div>
-                            <!-- //.project-wrapper -->
-                        </div>
-                        <!-- //.item -->
-
-                        <div class="item col-sm-6 col-md-3">
-                            <div class="project-wrapper">
-                                <div class="project-link">
-                                    <a href="http://themes.lucky-roo.com/berg/HTML_Template/assets/images/portfolio/project-image-2.jpg" class="zoom" title="Robosam 3">
-                                        <i class="icon-Full-Screen"></i>
-                                    </a>
-
-                                    <a href="http://themes.lucky-roo.com/berg/HTML_Template/single-portfolio-2.html" class="external-link" target="_blank">
-                                        <i class="icon-Link"></i>
-                                    </a>
-                                </div>
-                                <!-- //.project-link -->
-
-                                <div class="project-title">
-                                    <h4>Robosam 3</h4>
-                                </div>
-                                <!-- //.project-title -->
-
-                                <img src="MyResume/project-image-2.jpg" alt="" class="img-responsive">
-                            </div>
-                            <!-- //.project-wrapper -->
-                        </div>
-                        <!-- //.item -->
-
-                        <div class="item col-sm-6 col-md-3">
-                            <div class="project-wrapper">
-                                <div class="project-link">
-                                    <a href="http://themes.lucky-roo.com/berg/HTML_Template/assets/images/portfolio/project-image-3.jpg" class="zoom" title="Coke Man and Dog">
-                                        <i class="icon-Full-Screen"></i>
-                                    </a>
-
-                                    <a href="http://themes.lucky-roo.com/berg/HTML_Template/single-portfolio-1.html" class="external-link" target="_blank">
-                                        <i class="icon-Link"></i>
-                                    </a>
-                                </div>
-                                <!-- //.project-link -->
-
-                                <div class="project-title">
-                                    <h4>Coke Man and Dog</h4>
-                                </div>
-                                <!-- //.project-title -->
-
-                                <img src="MyResume/project-image-3.jpg" alt="" class="img-responsive">
-                            </div>
-                            <!-- //.project-wrapper -->
-                        </div>
-                        <!-- //.item -->
-
-                        <div class="item col-sm-6 col-md-3">
-                            <div class="project-wrapper">
-                                <div class="project-link">
-                                    <a href="http://themes.lucky-roo.com/berg/HTML_Template/assets/images/portfolio/project-image-4.jpg" class="zoom" title="Speed Projects">
-                                        <i class="icon-Full-Screen"></i>
-                                    </a>
-
-                                    <a href="http://themes.lucky-roo.com/berg/HTML_Template/single-portfolio-2.html" class="external-link" target="_blank">
-                                        <i class="icon-Link"></i>
-                                    </a>
-                                </div>
-                                <!-- //.project-link -->
-
-                                <div class="project-title">
-                                    <h4>Speed Projects</h4>
-                                </div>
-                                <!-- //.project-title -->
-
-                                <img src="MyResume/project-image-4.jpg" alt="" class="img-responsive">
-                            </div>
-                            <!-- //.project-wrapper -->
-                        </div>
-                        <!-- //.item -->
-
-                        <div class="item col-sm-6 col-md-3">
-                            <div class="project-wrapper">
-                                <div class="project-link">
-                                    <a href="http://themes.lucky-roo.com/berg/HTML_Template/assets/images/portfolio/project-image-5.jpg" class="zoom" title="Wooden Rhinoceros Beetle">
-                                        <i class="icon-Full-Screen"></i>
-                                    </a>
-
-                                    <a href="http://themes.lucky-roo.com/berg/HTML_Template/single-portfolio-1.html" class="external-link" target="_blank">
-                                        <i class="icon-Link"></i>
-                                    </a>
-                                </div>
-                                <!-- //.project-link -->
-
-                                <div class="project-title">
-                                    <h4>Wooden Rhinoceros Beetle</h4>
-                                </div>
-                                <!-- //.project-title -->
-
-                                <img src="MyResume/project-image-5.jpg" alt="" class="img-responsive">
-                            </div>
-                            <!-- //.project-wrapper -->
-                        </div>
-                        <!-- //.item -->
-
-                        <div class="item col-sm-6 col-md-3">
-                            <div class="project-wrapper">
-                                <div class="project-link">
-                                    <a href="http://themes.lucky-roo.com/berg/HTML_Template/assets/images/portfolio/project-image-6.jpg" class="zoom" title="The First Encounter">
-                                        <i class="icon-Full-Screen"></i>
-                                    </a>
-
-                                    <a href="http://themes.lucky-roo.com/berg/HTML_Template/single-portfolio-2.html" class="external-link" target="_blank">
-                                        <i class="icon-Link"></i>
-                                    </a>
-                                </div>
-                                <!-- //.project-link -->
-
-                                <div class="project-title">
-                                    <h4>The First Encounter</h4>
-                                </div>
-                                <!-- //.project-title -->
-
-                                <img src="MyResume/project-image-6.jpg" alt="" class="img-responsive">
-                            </div>
-                            <!-- //.project-wrapper -->
-                        </div>
-                        <!-- //.item -->
-
-                        <div class="item col-sm-6 col-md-3">
-                            <div class="project-wrapper">
-                                <div class="project-link">
-                                    <a href="http://themes.lucky-roo.com/berg/HTML_Template/assets/images/portfolio/project-image-7.jpg" class="zoom" title="Dead Pool">
-                                        <i class="icon-Full-Screen"></i>
-                                    </a>
-
-                                    <a href="http://themes.lucky-roo.com/berg/HTML_Template/single-portfolio-1.html" class="external-link" target="_blank">
-                                        <i class="icon-Link"></i>
-                                    </a>
-                                </div>
-                                <!-- //.project-link -->
-
-                                <div class="project-title">
-                                    <h4>Dead Pool</h4>
-                                </div>
-                                <!-- //.project-title -->
-
-                                <img src="MyResume/project-image-7.jpg" alt="" class="img-responsive">
-                            </div>
-                            <!-- //.project-wrapper -->
-                        </div>
-                        <!-- //.item -->
-
-                        <div class="item col-sm-6 col-md-3">
-                            <div class="project-wrapper">
-                                <div class="project-link">
-                                    <a href="http://themes.lucky-roo.com/berg/HTML_Template/assets/images/portfolio/project-image-8.jpg" class="zoom" title="Rebus II">
-                                        <i class="icon-Full-Screen"></i>
-                                    </a>
-
-                                    <a href="http://themes.lucky-roo.com/berg/HTML_Template/single-portfolio-2.html" class="external-link" target="_blank">
-                                        <i class="icon-Link"></i>
-                                    </a>
-                                </div>
-                                <!-- //.project-link -->
-
-                                <div class="project-title">
-                                    <h4>Rebus II</h4>
-                                </div>
-                                <!-- //.project-title -->
-
-                                <img src="MyResume/project-image-8.jpg" alt="" class="img-responsive">
-                            </div>
-                            <!-- //.project-wrapper -->
-                        </div>
-                        <!-- //.item -->
-                    </div>
-                    <!-- //.row -->
-                </div>
-                <!-- PORTFOLIO END -->
             </div>
-            <!-- //.section-content -->
-        </div>
-        <!-- //.container-fluid -->
-    </section>
-    <!-- //PORTFOLIO SECTION END -->
-    
-    
-    <!-- SERVICES SECTION START -->
-    <section id="services" class="section">
-        <div class="container section-wrapper">
-            <div class="section-content">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2 text-center">
-                        <h2 class="section-title uppercase">What I'm Doing</h2>
 
-                        <p style="opacity: 1;" class="section-subtitle animated bounceInLeft">
-                            I love what I do. I take great pride in what
- I do. And I can't do something halfway, three-quarters, nine-tenths. If
- I'm going to do something, I go all the way.
-                        </p>
-
-                        <span class="divider center"></span>
-                    </div>
-                    <!-- //.col-md-8 -->
+            <div class="skills-category">
+                <h4>AI, Testing & DevOps</h4>
+                <div class="skills-tags">
+                    <div class="tag"><i class="fa-solid fa-robot"></i> GitHub Copilot (Agent Mode)</div>
+                    <div class="tag"><i class="fa-solid fa-robot"></i> Claude (Anthropic)</div>
+                    <div class="tag"><i class="fa-solid fa-infinity"></i> Azure DevOps / GitHub Actions</div>
+                    <div class="tag"><i class="fa-solid fa-vial"></i> NUnit / Jasmine / Karma</div>
                 </div>
-                <!-- //.row -->
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2 class="section-title"><i class="fa-solid fa-briefcase"></i> Professional Journey</h2>
             
-                <!-- SERVICES START -->
-                <div class="services">
-                    <div class="row">
-                        <div style="height: 225px;" class="col-sm-4 col-md-4 item top dark-bg match-height">
-                            <div class="inner-content">
-                                <i class="icon-Chess colored-text"></i>
-
-                                <h4 style="opacity: 1;" class="uppercase animated fadeInUp">1. Strategy</h4>
-
-                                <p class="text-grey">
-                                    Lorem ipsum dolor sit amet, 
-consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
- laoreet dolore magna aliquam erat volutpat.
-                                </p>
-                            </div>
-                            <!-- //.inner-content -->
-                        </div>
-                        <!-- //.item -->
-
-                        <div style="height: 225px;" class="col-sm-4 col-md-4 item top match-height">
-                            <div class="inner-content">
-                                <i class="icon-Leafs-2 colored-text"></i>
-
-                                <h4 style="opacity: 1;" class="uppercase animated fadeInUp">2. Branding</h4>
-
-                                <p class="text-grey">
-                                    Lorem ipsum dolor sit amet, 
-consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
- laoreet dolore magna aliquam erat volutpat.
-                                </p>
-                            </div>
-                            <!-- //.inner-content -->
-                        </div>
-                        <!-- //.item -->
-
-                        <div style="height: 225px;" class="col-sm-4 col-md-4 item top dark-bg match-height">
-                            <div class="inner-content">
-                                <i class=" icon-Transform-2 colored-text"></i>
-
-                                <h4 style="opacity: 1;" class="uppercase animated fadeInUp">3. Web Design</h4>
-
-                                <p class="text-grey">
-                                    Lorem ipsum dolor sit amet, 
-consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
- laoreet dolore magna aliquam erat volutpat.
-                                </p>
-                            </div>
-                            <!-- //.inner-content -->
-                        </div>
-                        <!-- //.item -->
-                        
-                        <div style="height: 225px;" class="col-sm-4 col-md-4 item match-height">
-                            <div class="inner-content">
-                                <i class="icon-Speach-Bubble3 colored-text"></i>
-
-                                <h4 style="opacity: 1;" class="uppercase animated fadeInUp">4. Social Media</h4>
-
-                                <p class="text-grey">
-                                    Lorem ipsum dolor sit amet, 
-consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
- laoreet dolore magna aliquam erat volutpat.
-                                </p>
-                            </div>
-                            <!-- //.inner-content -->
-                        </div>
-                        <!-- //.item -->
-
-                        <div style="height: 225px;" class="col-sm-4 col-md-4 item dark-bg match-height">
-                            <div class="inner-content">
-                                <i class="icon-Monitor-Tablet colored-text"></i>
-
-                                <h4 style="opacity: 1;" class="uppercase animated fadeInUp">5. Development</h4>
-
-                                <p class="text-grey">
-                                    Lorem ipsum dolor sit amet, 
-consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
- laoreet dolore magna aliquam erat volutpat.
-                                </p>
-                            </div>
-                            <!-- //.inner-content -->
-                        </div>
-                        <!-- //.item -->
-
-                        <div style="height: 225px;" class="col-sm-4 col-md-4 item match-height">
-                            <div class="inner-content">
-                                <i class="icon-Consulting colored-text"></i>
-
-                                <h4 style="opacity: 1;" class="uppercase animated fadeInUp">6. Consulting</h4>
-
-                                <p class="text-grey">
-                                    Lorem ipsum dolor sit amet, 
-consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
- laoreet dolore magna aliquam erat volutpat.
-                                </p>
-                            </div>
-                            <!-- //.inner-content -->
-                        </div>
-                        <!-- //.item -->
-                    </div>
-                    <!-- //.row -->
-                </div>
-                <!-- //SERVICES END -->
-            </div>
-            <!-- //.section-content -->
-        </div>
-        <!-- //.container -->
-    </section>
-    <!-- //SERVICES SECTION END -->
-    
-    
-    <!-- STRENGHTS SECTION START -->
-    <section id="strenghts" class="section bg-image-yes">
-        <div class="container-fluid section-wrapper">
-            <div class="section-content">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2 text-center">
-                        <h2 class="section-title uppercase">My Strengths</h2>
-
-                        <p style="opacity: 1;" class="section-subtitle animated bounceInLeft">Failure will never overtake me if my determination to succeed is strong enough.</p>
-
-                        <span class="divider center"></span>
-                    </div>
-                    <!-- //.col-md-8 -->
-                </div>
-                <!-- //.row -->
+            <div class="timeline">
                 
-                <div class="row">
-                    <div class="col-md-12">
-
-                        <!-- COLUMN CHART START -->
-                        <div class="column-chart">
-                            <div class="legend legend-left hidden-xs">
-                                <h3 style="opacity: 1;" class="legend-title animated bounceInLeft">ME</h3>
-                            </div>
-                            <!-- //.legend -->
-
-                            <div class="legend legend-right hidden-xs">
-                                <div style="opacity: 1;" class="item animated bounceInUp">
-                                    <h4>Superhero</h4>
-                                </div>
-                                <!-- //.item -->
-
-                                <div style="opacity: 1;" class="item animated bounceInUp">
-                                    <h4>Preety Good</h4>
-                                </div>
-                                <!-- //.item -->
-
-                                <div style="opacity: 1;" class="item animated bounceInUp">
-                                    <h4>Good</h4>
-                                </div>
-                                <!-- //.item -->
-
-                                <div style="opacity: 1;" class="item animated bounceInUp">
-                                    <h4>Newbie</h4>
-                                </div>
-                                <!-- //.item -->
-                            </div>
-                            <!-- //.legend -->
-
-                            <div class="chart clearfix">
-                                <div class="item">
-                                    <div class="bar">
-                                        <span class="percent">92%</span>
-
-                                        <div style="height: 294.4px;" class="item-progress" data-percent="92">
-                                            <span class="title uppercase">Creativity</span>
-                                        </div>
-                                        <!-- //.item-progress -->
-                                    </div>
-                                    <!-- //.bar -->
-                                </div>
-                                <!-- //.item -->
-
-                                <div class="item">
-                                    <div class="bar">
-                                        <span class="percent">71%</span>
-
-                                        <div style="height: 227.2px;" class="item-progress" data-percent="71">
-                                            <span class="title uppercase">Reliable</span>
-                                        </div>
-                                        <!-- //.item-progress -->
-                                    </div>
-                                    <!-- //.bar -->
-                                </div>
-                                <!-- //.item -->
-
-                                <div class="item">
-                                    <div class="bar">
-                                        <span class="percent">82%</span>
-
-                                        <div style="height: 262.4px;" class="item-progress" data-percent="82">
-                                            <span class="title uppercase">Comunication</span>
-                                        </div>
-                                        <!-- //.item-progress -->
-                                    </div>
-                                    <!-- //.bar -->
-                                </div>
-                                <!-- //.item -->
-
-                                <div class="item">
-                                    <div class="bar">
-                                        <span class="percent">58%</span>
-
-                                        <div style="height: 185.6px;" class="item-progress" data-percent="58">
-                                            <span class="title uppercase">Leadership</span>
-                                        </div>
-                                        <!-- //.item-progress -->
-                                    </div>
-                                    <!-- //.bar -->
-                                </div>
-                                <!-- //.item -->
-
-                                <div class="item">
-                                    <div class="bar">
-                                        <span class="percent">67%</span>
-
-                                        <div style="height: 214.4px;" class="item-progress" data-percent="67">
-                                            <span class="title uppercase">Persuasion</span>
-                                        </div>
-                                        <!-- //.item-progress -->
-                                    </div>
-                                    <!-- //.bar -->
-                                </div>
-                                <!-- //.item -->
-                            </div>
-                            <!-- //.chart -->
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <div class="role">
+                            <h3>Lead Software Engineer</h3>
+                            <div class="company">EPAM Systems, Inc. • Coimbatore, TN</div>
                         </div>
-                        <!-- //COLUMN CHART END -->
-
+                        <span class="duration">March 2026 – Present</span>
                     </div>
-                    <!-- //.col-md-12 -->
+                    <div class="timeline-body">
+                        <ul>
+                            <li>Build and maintain production-grade automotive software (PPG Optima) using Angular 20 and .NET Core, optimizing paint shop workflows via real-time data ingestion.</li>
+                            <li>Drive codebase unification strategies—merging two distinct massive legacy software platforms into a high-performance application footprint.</li>
+                            <li>Leverage GitHub Copilot Agent Mode aggressively to boost high-velocity engineering metrics and overall clean code output.</li>
+                            <li>Actively lead across cross-functional distributed agile scrums maintaining deep client alignment.</li>
+                        </ul>
+                    </div>
                 </div>
-                <!-- //.row -->
+
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <div class="role">
+                            <h3>Technical Lead</h3>
+                            <div class="company">Aspire Systems • Chennai, TN</div>
+                        </div>
+                        <span class="duration">July 2021 – February 2026</span>
+                    </div>
+                    <div class="timeline-body">
+                        <ul>
+                            <li>Defined engineering roadmap and technology directions for core corporate squads, keeping systems scalable and inline with long-term commercial targets.</li>
+                            <li>Designed modern modular microservices architectures for marquee blue-chip clients including KPMG, FeFundInfo, and Marina Bay Sands.</li>
+                            <li>Enforced SOLID architecture adherence across internal teams, establishing strict code-review templates and strict pipeline standards.</li>
+                            <li>Owned DevOps pipelines via GitHub Actions and Azure DevOps, shifting testing left to drastically cut out post-release regressions.</li>
+                            <li>Acted as primary system escalation engineer while handling explicit technical mentoring structures to level up junior talent.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <div class="role">
+                            <h3>Module Lead / Senior Software Engineer</h3>
+                            <div class="company">Aspire Systems • Chennai, TN</div>
+                        </div>
+                        <span class="duration">June 2014 – July 2021</span>
+                    </div>
+                    <div class="timeline-body">
+                        <ul>
+                            <li>Headed complex module deliveries for Pearson SchoolNet—an expansive K–12 educational evaluation framework built with MVC, Angular, and high-performance SQL.</li>
+                            <li>Handled system footprint impact analyses, comprehensive unit-level component design maps, and cross-team test coordination layouts.</li>
+                            <li>Successfully deployed Klick Book (Milano SaaS, Canada) using full Domain-Driven Design patterns mapping critical POS, booking, and CRM system integrations.</li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
-            <!-- //.section-content -->
-        </div>
-        <!-- //.container -->
-    </section>
-    <!-- //STRENGHTS SECTION END -->
-    
-    
-    <!-- RESUME SECTION START -->
-    <section id="resume" class="section">
-        <div class="container section-wrapper">
-            <div class="section-content">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2 text-center">
-                        <h2 class="section-title uppercase">My Resume</h2>
+        </section>
 
-                        <p style="opacity: 1;" class="section-subtitle animated bounceInLeft">
-                            If you call failures experiments, you can put them in your resume and claim them as achievements.
-                        </p>
-
-                        <span class="divider center"></span>
-                    </div>
-                    <!-- //.col-md-8 -->
-                </div>
-                <!-- //.row -->
-                
-                <!-- EDUCATION START -->
-                <div class="row education">
-                    <div class="col-md-10 col-md-offset-1">
-                        <h3>
-                            My Education
-                            <br>
-                            2008 - 2014
-                        </h3>
-
-                        <div class="panel-group resume" id="education">
-                            <div class="resume-item">
-                                <div class="resume-year">
-                                    <span class="resume-year">2011 - 2014</span>
-                                </div>
-                                <!-- //.resume-year -->
-
-                                <div class="resume-btn">
-                                    <a href="#education1" data-toggle="collapse" data-parent="#education"></a>
-                                </div>
-                                <!-- //.resume-btn -->
-
-                                <div class="panel">
-                                    <div class="panel-heading">
-                                        <div class="panel-title">
-                                            <h4 class="resume-title">Master of Computer Applications - Sri Shakthi Institute of Engineering and Technology</h4>
-                                        </div>
-                                        <!-- //.panel-title -->
-                                    </div>
-                                    <!-- //.panel-heading -->
-
-                                    <div id="education1" class="panel-collapse collapse in">
-                                        <div class="panel-body text-grey">
-                                            <p>
-                                              CGPA: 7.5
-                                            </p>
-                                        </div>
-                                        <!-- //.panel-body -->
-                                    </div>
-                                    <!-- //.panel-collapse -->
-                                </div>
-                                <!-- //.panel -->
-                            </div>
-                            <!-- //.resume-item -->
-
-                            <div style="opacity: 1;" class="resume-item animated bounceInUp">
-                                <div class="resume-year">
-                                    <span class="resume-year">2008 - 2011</span>
-                                </div>
-                                <!-- //.resume-year -->
-
-                                <div class="resume-btn">
-                                    <a aria-expanded="false" href="#education2" class="collapsed" data-toggle="collapse" data-parent="#education"></a>
-                                </div>
-                                <!-- //.resume-btn -->
-
-                                <div class="panel">
-                                    <div class="panel-heading">
-                                        <div class="panel-title">
-                                            <h4 class="resume-title">Bachelor of Computer Science - SNR Sons of Arts and Science College</h4>
-                                        </div>
-                                        <!-- //.panel-title -->
-                                    </div>
-                                    <!-- //.panel-heading -->
-
-                                    <div style="height: 0px;" aria-expanded="false" id="education2" class="panel-collapse collapse">
-                                        <div class="panel-body text-grey">
-                                            <p>
-                                              Percentage: 82
-                                            </p>
-                                        </div>
-                                        <!-- //.panel-body -->
-                                    </div>
-                                    <!-- //.panel-collapse -->
-                                </div>
-                                <!-- //.panel -->
-                            </div>
-                            <!-- //.resume-item -->
-                        </div>
-                        <!-- //.panel-group -->
-                    </div>
-                    <!-- //.col-md-10 -->
-                </div>
-                <!-- //EDUCATION END -->
+        <section id="projects">
+            <h2 class="section-title"><i class="fa-solid fa-diagram-project"></i> Selected Enterprise Deployments</h2>
             
-                <!-- WORK EXPERIENCE START -->
-                <div class="row work-experience">
-                    <div class="col-md-10 col-md-offset-1">
-                        <h3>
-                            Work Experience
-                            <br>
-                            2014 - Now
-                        </h3>
-
-                        <div class="panel-group resume" id="work">
-                            <div class="resume-item">
-                                <div class="resume-year">
-                                    <span class="resume-year">2014 - Now</span>
-                                </div>
-                                <!-- //.resume-year -->
-
-                                <div class="resume-btn">
-                                    <a href="#work1" data-toggle="collapse" data-parent="#work"></a>
-                                </div>
-                                <!-- //.resume-btn -->
-
-                                <div class="panel">
-                                    <div class="panel-heading">
-                                        <div class="panel-title">
-                                            <h4 class="resume-title">Software Engineer - Aspire Systems</h4>
-                                        </div>
-                                        <!-- //.panel-title -->
-                                    </div>
-                                    <!-- //.panel-heading -->
-
-                                    <div id="work1" class="panel-collapse collapse in">
-                                        <div class="panel-body text-grey">
-                                            <p>
-                                                Responsibilities:
-                                                <br>
-                                                <ul>
-                                                    <li>Understanding the product requirement and analysis with team members.</li>
-                                                    <li>Collaborate with other programmers to design and implement features.</li>
-                                                    <li>Quickly produce well-organized, optimized, and documented source code.</li>
-                                                    <li>Debug existing source code and polish feature sets.</li>
-                                                    <li>Contribute to technical design documentation.</li>
-                                                    <li>Work independently when required.</li>
-                                                    <li>Continuously learn and improve skills.</li>
-                                                </ul>
-                                            </p>
-                                        </div>
-                                        <!-- //.panel-body -->
-                                    </div>
-                                    <!-- //.panel-collapse -->
-                                </div>
-                                <!-- //.panel -->
-                            </div>
-                            <!-- //.resume-item -->
-                        </div>
-                        <!-- //.panel-group -->
+            <div class="projects-grid">
+                
+                <div class="project-card">
+                    <div class="project-top">
+                        <h3>PPG Industries – Optima</h3>
+                        <span class="client-meta">Client: Manufacturing Automation</span>
+                        <p class="project-desc">Automotive paint-shop optimization hub orchestrating real-time streaming sensor feeds to clean and streamline cross-factory workflows.</p>
                     </div>
-                    <!-- //.col-md-10 -->
+                    <div class="project-tech">
+                        <span class="tech-pill">Angular 20</span>
+                        <span class="tech-pill">.NET Core</span>
+                        <span class="tech-pill">Azure Cloud</span>
+                        <span class="tech-pill">Microservices</span>
+                    </div>
                 </div>
-                <!-- //WORK EXPERIENCE END -->
+
+                <div class="project-card">
+                    <div class="project-top">
+                        <h3>KPMG – Evolute</h3>
+                        <span class="client-meta">Client: Financial / Corporate Compliance</span>
+                        <p class="project-desc">Highly resilient enterprise scale KYC onboarding portal managing digital entity registrations, directorship modifications, and cross-border M&As.</p>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-pill">.NET 8</span>
+                        <span class="tech-pill">Angular 19</span>
+                        <span class="tech-pill">Azure APIM</span>
+                        <span class="tech-pill">KeyVault</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-top">
+                        <h3>FeFundInfo Platform</h3>
+                        <span class="client-meta">Client: Global Fund Management</span>
+                        <p class="project-desc">A complex data processing platform engineered to supply institutional investment consultants and asset managers with rich analytics data feeds.</p>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-pill">Durable Functions</span>
+                        <span class="tech-pill">CosmosDB</span>
+                        <span class="tech-pill">ASP.NET Core</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-top">
+                        <h3>Marina Bay Sands Integration</h3>
+                        <span class="client-meta">Client: Hospitality & Enterprise Operations</span>
+                        <p class="project-desc">A bulletproof Azure APIM abstraction mesh managing cryptographic JWT security handshakes, high-velocity validation processing, and core API rules.</p>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-pill">Azure APIM</span>
+                        <span class="tech-pill">JWT</span>
+                        <span class="tech-pill">C# API Layer</span>
+                    </div>
+                </div>
+
             </div>
-            <!-- //.section-content -->
-        </div>
-        <!-- //.container -->
-    </section>
-    <!-- //RESUME SECTION END -->
-    
-    
-    <!-- REFERENCES SECTION START -->
-    <section id="references" class="section bg-image-yes">
-        <div class="container-fluid section-wrapper">
-            <div class="section-content">
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                        <h2 class="section-title uppercase">References</h2>
-
-                        <p style="opacity: 1;" class="section-subtitle animated bounceInLeft">Testimonials are enough to convince people for now.</p>
-
-                        <span class="divider center"></span>
-                    </div>
-                    <!-- //.col-md-12 -->
-                </div>
-                <!-- //.row -->
-                
-                <div class="row">
-                    <div class="col-md-10 col-md-offset-1">
-                        <div class="flexslider references">
-                            <div class="slides">
-                                <div style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;" class="item">
-                                    <div class="animated" data-animation-effect="flipInX">
-                                        <div class="profile hidden-xs">
-                                            <img draggable="false" src="MyResume/profile-image-1.jpg" alt="" class="img-responsive img-circle img-thumbnail">
-                                        </div>
-
-                                        <div class="content">
-                                            <h3>Lorena Group</h3>
-
-                                            <p>
-                                                "Berg is officially the 
-man! His level of professionalism and the understanding of the subject 
-matter is the reason i will be looking forward to working with him in 
-the future."
-                                            </p>
-
-                                            <p class="source">
-                                                Eka Sari Lorena
-                                                <br>
-                                                <span>President Director</span>
-                                            </p>
-                                        </div>
-                                        <!-- //.content -->
-                                    </div>
-                                    <!-- //.animated -->
-                                </div>
-                                <!-- //.item -->
-
-                                <div style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;" class="item">
-                                    <div class="animated" data-animation-effect="flipInX">
-                                        <div class="profile hidden-xs">
-                                            <img draggable="false" src="MyResume/profile-image-2.jpg" alt="" class="img-responsive img-circle img-thumbnail">
-                                        </div>
-
-                                        <div class="content">
-                                            <h3>NET TV</h3>
-
-                                            <p>
-                                                "As always Berg did an 
-excellent job in just few hours. Great communication and fast 
-excecution. Thanks for great work :)"
-                                            </p>
-
-                                            <p class="source">
-                                                Wishnutama Kusubandio
-                                                <br>
-                                                <span>CO-FOUNDER / CEO</span>
-                                            </p>
-                                        </div>
-                                        <!-- //.content -->
-                                    </div>
-                                    <!-- //.animated -->
-                                </div>
-                                <!-- //.item -->
-
-                                <div style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;" class="item">
-                                    <div class="animated" data-animation-effect="flipInX">
-                                        <div class="profile hidden-xs">
-                                            <img draggable="false" src="MyResume/profile-image-3.jpg" alt="" class="img-responsive img-circle img-thumbnail">
-                                        </div>
-
-                                        <div class="content">
-                                            <h3>MNC Group</h3>
-
-                                            <p>
-                                                "As always, great 
-creative thinking for the best solution. Berg is by far the most 
-professional and knowledgeable provider I worked with. I will hire him 
-again :)"
-                                            </p>
-
-                                            <p class="source">
-                                                Hary Tanoesoedibjo
-                                                <br>
-                                                <span>President Director</span>
-                                            </p>
-                                        </div>
-                                        <!-- //.content -->
-                                    </div>
-                                    <!-- //.animated -->
-                                </div>
-                                <!-- //.item -->
-
-                                <div style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 1; display: block; z-index: 2;" class="item flex-active-slide">
-                                    <div class="animated" data-animation-effect="flipInX">
-                                        <div class="profile hidden-xs">
-                                            <img draggable="false" src="MyResume/profile-image-4.jpg" alt="" class="img-responsive img-circle img-thumbnail">
-                                        </div>
-
-                                        <div class="content">
-                                            <h3>CT Corp</h3>
-
-                                            <p>
-                                                "We called on Berg to 
-help us deliver on few projects with tight deadlines. He seamlessly 
-integrated into our workflow and quickly became a key part of our team. 
-Great job!"
-                                            </p>
-
-                                            <p class="source">
-                                                Chairul Tanjung
-                                                <br>
-                                                <span>Founder and Chairman</span>
-                                            </p>
-                                        </div>
-                                        <!-- //.content -->
-                                    </div>
-                                    <!-- //.animated -->
-                                </div>
-                                <!-- //.item -->
-
-                                <div style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;" class="item">
-                                    <div class="animated" data-animation-effect="flipInX">
-                                        <div class="profile hidden-xs">
-                                            <img draggable="false" src="MyResume/profile-image-5.jpg" alt="" class="img-responsive img-circle img-thumbnail">
-                                        </div>
-
-                                        <div class="content">
-                                            <h3>Mustika Ratu</h3>
-
-                                            <p>
-                                                "Berg technical 
-knowledge and branding experience came together and resulted in a site 
-that is not only catching and interesting, but also one that is 
-user-friendly. Thanks again."
-                                            </p>
-
-                                            <p class="source">
-                                                Mooryati Soedibyo
-                                                <br>
-                                                <span>President Director</span>
-                                            </p>
-                                        </div>
-                                        <!-- //.content -->
-                                    </div>
-                                    <!-- //.animated -->
-                                </div>
-                                <!-- //.item -->
-                            </div>
-                            <!-- //.slides -->
-
-                            <div class="flexslider-controls">
-                                <ul class="flex-control-nav">
-                                    <li class="">
-                                        <img draggable="false" src="MyResume/profile-image-1.jpg" alt="" class="img-responsive">
-                                    </li>
-
-                                    <li class="">
-                                        <img draggable="false" src="MyResume/profile-image-2.jpg" alt="" class="img-responsive">
-                                    </li>
-
-                                    <li class="">
-                                        <img draggable="false" src="MyResume/profile-image-3.jpg" alt="" class="img-responsive">
-                                    </li>
-
-                                    <li class="flex-active">
-                                        <img draggable="false" src="MyResume/profile-image-4.jpg" alt="" class="img-responsive">
-                                    </li>
-
-                                    <li class="">
-                                        <img draggable="false" src="MyResume/profile-image-5.jpg" alt="" class="img-responsive">
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- //.flexslider-controls -->
-
-                            <ul class="flex-direction-nav-custom list-inline hidden-xs">
-                                <li>
-                                    <a class="flex-prev" href="#">
-                                        <i class="icon-Left-3"></i>
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a class="flex-next" href="#">
-                                        <i class="icon-Right-3"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- //.flexslider -->
-                    </div>
-                    <!-- //.col-md-8 -->
-                </div>
-                <!-- //.row -->
-            </div>
-            <!-- //.section-content -->
-        </div>
-        <!-- //.container -->
-    </section>
-    <!-- //REFERENCES SECTION END -->
-    
-    
-    <!-- SKILLS SECTION START -->
-    <section id="skills" class="section">
-        <div class="container section-wrapper">
-            <div class="section-content">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2 text-center">
-                        <h2 class="section-title uppercase">Skills &amp; Expertise</h2>
-
-                        <p style="opacity: 1;" class="section-subtitle animated bounceInLeft">A
- winner is someone who recognizes his God-given talents, works his tail 
-off to develop them into skills, and uses these skills to accomplish his
- goals.</p>
-
-                        <span class="divider center"></span>
-                    </div>
-                    <!-- //.col-md-8 -->
-                </div>
-                <!-- //.row -->
-                
-                <!-- CIRCLE CHART START -->
-                <div class="circle-chart">
-                    <div class="row">
-                        <div class="col-sm-4 col-md-2 col-md-offset-3">
-                            <div class="item">
-                                <div class="circle">
-                                    <span style="height: 48.6px;" class="item-progress" data-percent="90"></span>
-                                </div>
-                                <!-- //.circle -->
-
-                                <span class="percent">90%</span>
-
-                                <h4 class="text-center uppercase">HTML5 + CSS3</h4>
-                            </div>
-                            <!-- //.item -->
-                        </div>
-                        <!-- //.col-md-2 -->
-
-                        <div class="col-sm-4 col-md-2">
-                            <div class="item">
-                                <div class="circle">
-                                    <span style="height: 70.2px;" class="item-progress" data-percent="90"></span>
-                                </div>
-                                <!-- //.circle -->
-
-                                <span class="percent">90%</span>
-
-                                <h4 class="text-center uppercase">Angular JS</h4>
-                            </div>
-                            <!-- //.item -->
-                        </div>
-                        <!-- //.col-md-2 -->
-
-                        <div class="col-sm-4 col-md-2">
-                            <div class="item">
-                                <div class="circle">
-                                    <span style="height: 59.4px;" class="item-progress" data-percent="80"></span>
-                                </div>
-                                <!-- //.circle -->
-
-                                <span class="percent">80%</span>
-
-                                <h4 class="text-center uppercase">.Net Technologies</h4>
-                            </div>
-                            <!-- //.item -->
-                        </div>
-                        <!-- //.col-md-2 -->                        
-                    </div>
-                    <!-- //.row -->
-                </div>
-                <!-- //CIRCLE CHART END -->
-            </div>
-            <!-- //.section-content -->
-        </div>
-        <!-- //.container -->
-    </section>
-    <!-- //SKILLS SECTION END -->
-    
-    
-    <!-- KNOWLEDGE SECTION START -->
-    <section id="knowledge" class="section">
-        <div class="container section-wrapper">
-            <div class="section-content">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2 text-center">
-                        <h2 class="section-title uppercase">Knowledge</h2>
-
-                        <p style="opacity: 1;" class="section-subtitle animated bounceInLeft">Human behavior flows from three main sources: desire, emotion, and knowledge.</p>
-
-                        <span class="divider center"></span>
-                    </div>
-                    <!-- //.col-md-8 -->
-                </div>
-                <!-- //.row -->
-                
-                <!-- BAR CHART START -->
-                <div class="row">
-                    <div class="col-sm-6 col-md-6">
-                        <div class="bar-chart">
-                            <div class="item">
-                                <h4 class="uppercase">Brand Marketing</h4>
-
-                                <div class="bar">
-                                    <span style="left: 209.75px;" class="percent">45%</span>
-                                    <span style="width: 249.75px;" class="item-progress" data-percent="45"></span>
-                                </div>
-                                <!-- //.bar -->
-                            </div>
-                            <!-- //.item -->
-
-                            <div class="item">
-                                <h4 class="uppercase">Web Development</h4>
-
-                                <div class="bar">
-                                    <span style="left: 320.75px;" class="percent">65%</span>
-                                    <span style="width: 360.75px;" class="item-progress" data-percent="65"></span>
-                                </div>
-                                <!-- //.bar -->
-                            </div>
-                            <!-- //.item -->
-
-                            <div class="item">
-                                <h4 class="uppercase">Digital Design</h4>
-
-                                <div class="bar">
-                                    <span style="left: 265.25px;" class="percent">55%</span>
-                                    <span style="width: 305.25px;" class="item-progress" data-percent="55"></span>
-                                </div>
-                                <!-- //.bar -->
-                            </div>
-                            <!-- //.item -->
-                        </div>
-                        <!-- //.bar-chart -->
-                    </div>
-                    <!-- //.col-md-6 -->
-
-                    <div class="col-sm-6 col-md-6">
-                        <div class="bar-chart">
-                            <div class="item">
-                                <h4 class="uppercase">Brand Design</h4>
-
-                                <div class="bar">
-                                    <span style="left: 209.75px;" class="percent">45%</span>
-                                    <span style="width: 249.75px;" class="item-progress" data-percent="45"></span>
-                                </div>
-                                <!-- //.bar -->
-                            </div>
-                            <!-- //.item -->
-
-                            <div class="item">
-                                <h4 class="uppercase">Internet Marketing</h4>
-
-                                <div class="bar">
-                                    <span style="left: 320.75px;" class="percent">65%</span>
-                                    <span style="width: 360.75px;" class="item-progress" data-percent="65"></span>
-                                </div>
-                                <!-- //.bar -->
-                            </div>
-                            <!-- //.item -->
-
-                            <div class="item">
-                                <h4 class="uppercase">Video Editing</h4>
-
-                                <div class="bar">
-                                    <span style="left: 265.25px;" class="percent">55%</span>
-                                    <span style="width: 305.25px;" class="item-progress" data-percent="55"></span>
-                                </div>
-                                <!-- //.bar -->
-                            </div>
-                            <!-- //.item -->
-                        </div>
-                        <!-- //.bar-chart -->
-                    </div>
-                    <!-- //.col-md-6 -->
-                </div>
-                <!-- //BAR CHART END -->
-            </div>
-            <!-- //.section-content -->
-        </div>
-        <!-- //.container -->
-        
-    </section>
-    <!-- //KNOWLEDGE SECTION END -->
-    
-    <!-- WORK PROCESS SECTION START -->
-    <section id="work-process" class="section">
-        <div class="container section-wrapper">
-            <div class="section-content">
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                        <h2 class="section-title uppercase">Work Process</h2>
-
-                        <p style="opacity: 1;" class="section-subtitle animated bounceInLeft">
-                            As a human being, I'm work in process.
-                        </p>
-
-                        <span class="divider center"></span>
-                    </div>
-                    <!-- //.col-md-12 -->
-                </div>
-                <!-- //.row -->
-                
-                <div class="row">
-                    <div class="col-md-12">
-                        <p class="text-grey text-justify">
-                            Lorem ipsum dolor sit amet, consectetuer 
-adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet 
-dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis 
-nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex 
-ea commodo consequat.
-                        </p>
-                    </div>
-                    <!-- //.col-md-12 -->
-                </div>
-                <!-- //.row -->
-                
-                <!-- WORK PROCESS START -->
-                <div class="work-process">
-                    <div class="row">
-                        <div class="col-sm-2 col-md-2 item no-margin first">
-                            <div class="inner-content">
-                                <i class="icon-Light-Bulb2"></i>
-
-                                <span style="opacity: 1;" class="title animated fadeInUp">1. Idea</span>
-
-                                <span class="dot"></span>
-                            </div>
-                            <!-- //.inner-content -->
-
-                            <i class="icon-Arrow icon-Down-3"></i>
-                        </div>
-                        <!-- //.item -->
-
-                        <div class="col-sm-2 col-md-2 item">
-                            <div class="inner-content">
-                                <i class="icon-Pencil"></i>
-
-                                <span style="opacity: 1;" class="title animated fadeInUp">2. Sketch</span>
-                            </div>
-                            <!-- //.inner-content -->
-
-                            <i class="icon-Arrow icon-Up-3"></i>
-                        </div>
-                        <!-- //.item -->
-
-                        <div class="col-sm-2 col-md-2 item no-margin">
-                            <div class="inner-content">
-                                <i class="icon-Monitor-2"></i>
-
-                                <span style="opacity: 1;" class="title animated fadeInUp">3. Design</span>
-                            </div>
-                            <!-- //.inner-content -->
-
-                            <i class="icon-Arrow icon-Down-3"></i>
-                        </div>
-                        <!-- //.item -->
-
-                        <div class="col-sm-2 col-md-2 item">
-                            <div class="inner-content">
-                                <i class="icon-Coding"></i>
-
-                                <span style="opacity: 1;" class="title animated fadeInUp">4. Develop</span>
-                            </div>
-                            <!-- //.inner-content -->
-
-                            <i class="icon-Arrow icon-Up-3"></i>
-                        </div>
-                        <!-- //.item -->
-
-                        <div class="col-sm-2 col-md-2 item no-margin">
-                            <div class="inner-content">
-                                <i class="icon-Bug"></i>
-
-                                <span style="opacity: 1;" class="title animated fadeInUp">5. Test</span>
-                            </div>
-                            <!-- //.inner-content -->
-
-                            <i class="icon-Arrow icon-Down-3"></i>
-                        </div>
-                        <!-- //.item -->
-
-                        <div class="col-sm-2 col-md-2 item last">
-                            <div class="inner-content">
-                                <i class="icon-Rocket"></i>
-
-                                <span style="opacity: 1;" class="title animated fadeInUp">6. Launch</span>
-
-                                <span class="dot"></span>
-                            </div>
-                            <!-- //.inner-content -->
-                        </div>
-                        <!-- //.item -->
-                    </div>
-                    <!-- //.row -->
-                </div>
-                <!-- //WORK PROCESS END -->
-                
-                <div class="row">
-                    <div class="col-md-12">
-                        <p class="text-grey text-justify">
-                            Lorem ipsum dolor sit amet, consectetuer 
-adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet 
-dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis 
-nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex 
-ea commodo consequat. Lorem ipsum dolor sit amet, consectetuer 
-adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet 
-dolore magna aliquam erat volutpat.
-                        </p>
-                    </div>
-                    <!-- //.col-md-12 -->
-                </div>
-                <!-- //.row -->
-            </div>
-            <!-- //.section-content -->
-        </div>
-        <!-- //.container -->
-    </section>
-    <!-- //WORK PROCESS SECTION END -->
-    
-    
-    <!-- CONTACT SECTION START -->
-    <section id="contact" class="section">
-        <div class="container section-wrapper">
-            <div class="section-content">
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                        <h2 class="section-title uppercase">Contact Me</h2>
-
-                        <p style="opacity: 1;" class="section-subtitle animated bounceInLeft">
-                            Have a project you'd like to discuss?
-                        </p>
-
-                        <span class="divider center"></span>
-                    </div>
-                    <!-- //.col-md-12 -->
-                </div>
-                <!-- //.row -->
-                
-                <div class="row">
-                    <div class="col-md-12">
-
-                        <!-- CONTACT DETAILS START -->
-                        <div style="opacity: 1;" class="contact-details text-center animated flipInX">
-                            <div class="speech-bubble">
-                                <i class="icon-Speach-Bubble11"></i>
-
-                                <h4 class="uppercase text-grey">
-                                    Say<br>Hello
-                                </h4>
-                            </div>
-                            <!-- //.speech-bubble -->
-
-                            <h2 class="uppercase">Karthik <strong>Govind</strong></h2>
-
-                            <h4 class="text-grey">holly.karthi@gmail.com</h4>
-
-                            <span class="divider center"></span>
-                        </div>
-                        <!-- //CONTACT DETAILS END -->
-                    </div>
-                    <!-- //.col-md-12 -->
-                </div>
-                <!-- //.row -->
-            </div>
-            <!-- //.section-content -->
-        </div>
-        <!-- //.container -->
-    </section>
-    <!-- //CONTACT SECTION END -->
-    
-    
-    <!-- FOOTER START -->
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="page-scroll">
-                        <a href="#page-top"><i class="icon-Arrow-Up"></i></a>
-                    </div>
-                    <!-- //.page-scroll -->
+        </section>
+
+        <section id="education">
+            <h2 class="section-title"><i class="fa-solid fa-graduation-cap"></i> Education & Achievements</h2>
+            
+            <div class="edu-cert-container">
+                <div>
+                    <h3 style="color: var(--text-bright); margin-bottom: 1.5rem; font-size: 1.2rem;">Education</h3>
                     
-                    <ul class="list-inline social-icons">
-                        <li>
-                            <div class="item">
-                                <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
-                            </div>
-                            <!-- //.item -->
-                        </li>
-                        
-                        <li>
-                            <div class="item">
-                                <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
-                            </div>
-                            <!-- //.item -->
-                        </li>
-                        
-                        <li>
-                            <div class="item">
-                                <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
-                            </div>
-                            <!-- //.item -->
-                        </li>
-                        
-                        <li>
-                            <div class="item">
-                                <a href="#" target="_blank"><i class="fa fa-dribbble"></i></a>
-                            </div>
-                            <!-- //.item -->
-                        </li>
-                        
-                        <li>
-                            <div class="item">
-                                <a href="#" target="_blank"><i class="fa fa-pinterest"></i></a>
-                            </div>
-                            <!-- //.item -->
-                        </li>
+                    <div class="edu-card">
+                        <h4>Master of Computer Applications (MCA)</h4>
+                        <p>Sri Shakthi Institute of Engineering & Technology (Anna University)</p>
+                        <span class="edu-meta">Graduated: May 2014 • Score: 78.5%</span>
+                    </div>
+
+                    <div class="edu-card">
+                        <h4>Bachelor of Computer Science (BCS)</h4>
+                        <p>SNR Sons College of Arts & Science</p>
+                        <span class="edu-meta">Graduated: May 2011 • Score: 80%</span>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 style="color: var(--text-bright); margin-bottom: 1.5rem; font-size: 1.2rem;">Modern Certifications</h3>
+                    <ul class="cert-list">
+                        <li><i class="fa-solid fa-certificate"></i> Anthropic: Claude 101, Claude Code 101 & In Action (2026)</li>
+                        <li><i class="fa-solid fa-certificate"></i> MongoDB: M101N for .NET Developers</li>
+                        <li><i class="fa-solid fa-certificate"></i> edX: Advanced TypeScript, jQuery & Bootstrap</li>
+                        <li><i class="fa-solid fa-certificate"></i> Code School: Core AngularJS Stack</li>
                     </ul>
                 </div>
-                <!-- //.col-md-12 -->
             </div>
-            <!-- //.row -->
-            
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="copyright text-center">
-                        <p class="text-grey">© 2015 Karthikeyan Govindarajan. All rights reserved.</p>
-                    </div>
-                    <!-- //.copyright -->
-                </div>
-                <!-- //.col-md-12 -->
-            </div>
-            <!-- //.row -->
-        </div>
-        <!-- //.container -->
-    </footer>
-    <!-- //FOOTER END -->
-    
-    
-    <!-- Plugins JS -->
-    <script src="MyResume/analytics.js" async=""></script><script src="MyResume/jquery_008.js"></script>
-    <script src="MyResume/bootstrap.js"></script>
-    <script src="MyResume/jpreloader.js"></script>
-    <script src="MyResume/detectmobilebrowser.js"></script>
-    <script src="MyResume/debouncer.js"></script>
-    <script src="MyResume/jquery_005.js"></script>
-    <script src="MyResume/jquery_003.js"></script>
-    <script src="MyResume/jquery_007.js"></script>
-    <script src="MyResume/jquery_006.js"></script>
-    <script src="MyResume/jquery_004.js"></script>
-    <script src="MyResume/jquery_002.js"></script>
-    <script src="MyResume/jquery.js"></script>
-    <script src="MyResume/morphext.js"></script>
-    
-    <!-- Main JS -->
-    <script src="MyResume/main.js"></script>
-    
-    <!-- Text Rotator JS -->
-    <script src="MyResume/text-rotator.js"></script>
-    
-    <!-- Animation JS (Optional) -->
-    <script src="MyResume/animation.js"></script>
-    
-    <script src="MyResume/switch-style.js"></script>
-    
-    <script src="MyResume/personal.js"></script>
-    
+        </section>
+
+    </main>
+
     <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        const sections = document.querySelectorAll("section");
+        const navLi = document.querySelectorAll("nav ul.nav-links li a");
 
-        ga('create', 'UA-66518533-1', 'auto');
-        ga('send', 'pageview');
+        window.addEventListener("scroll", () => {
+            let current = "";
+            sections.forEach((section) => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop - 150) {
+                    current = section.getAttribute("id");
+                }
+            });
+
+            navLi.forEach((a) => {
+                a.classList.remove("active");
+                if (a.getAttribute("href").includes(current)) {
+                    a.classList.add("active");
+                }
+            });
+        });
     </script>
-
-
-
-</body></html>
+</body>
+</html>
